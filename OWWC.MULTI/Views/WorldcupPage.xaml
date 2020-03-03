@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OWWC.MULTI.Views.WorldcupPage" xmlns:vm="clr-namespace:OWWC.MULTI.ViewModels" Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:WorldcupViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="live">#ee4142</Color>
+            <Color x:Key="gray">#333000</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="boldFont">
+                <On Platform="Android" Value="ConcourseT4-Bold.ttf#ConcourseT4-Bold" />
+                <On Platform="iOS" Value="ConcourseT4-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="normalFont">
+                <On Platform="Android" Value="ConcourseT4-Regular.ttf#ConcourseT4" />
+                <On Platform="iOS" Value="ConcourseT4-Regular" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="classicFont">
+                <On Platform="Android" Value="OpenSans.ttf#OpenSans" />
+                <On Platform="iOS" Value="OpenSans" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="liveGame" Grid.Row="0">
+            <Frame BorderColor="Black" Padding="1" Scale="1.017">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Spacing="1">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" >             
+                        <Image Source="live.png" HeightRequest="18"/> 
+                        <Label TextColor="{StaticResource live}" Text="Live" FontAttributes="Bold" FontSize="22"/>
+                    </StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="0.5*" />
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="0">
+                            <Label x:Name="liveText1" TextColor="{StaticResource gray}" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="1">
+                            <Label TextColor="{StaticResource gray}" Text="-" FontAttributes="Bold" FontSize="22"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Grid.Column="2">
+                            <Label x:Name="liveText2" TextColor="{StaticResource gray}" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </Grid>
+        <Grid x:Name="mainContent" Grid.Row="1">
+            <ScrollView Orientation="Vertical">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="mainpageResults" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="1">
+                            <ScrollView Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Start" >
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
+                                    <Frame BorderColor="Black" Padding="16, 16, 16, 0" Margin="5">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="62" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="130" />
+                                                <ColumnDefinition Width="10" />
+                                                <ColumnDefinition Width="130" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout HorizontalOptions="Start" Grid.Row="0" Grid.ColumnSpan="2">
+                                                <Label x:Name="game1Date" TextColor="Black" FontSize="17"/>
+                                            </StackLayout>
+                                            <Image x:Name="flag1" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" HeightRequest="55"/>
+                                            <Image x:Name="flag2" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" HeightRequest="55"/>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="2">
+                                                <Label x:Name="team1" HorizontalTextAlignment="Center"  TextColor="{StaticResource gray}" FontSize="22" FontFamily="{StaticResource classicFont}"/>
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3">
+                                                <Label TextColor="{StaticResource gray}" Text="-" FontSize="40" FontFamily="{StaticResource boldFont}"/>
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" Grid.Row="2" >
+                                                <Label x:Name="team2" HorizontalTextAlignment="Center" TextColor="{StaticResource gray}" FontSize="22" FontFamily="{StaticResource classicFont}"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                    <Frame BorderColor="Black" Padding="16, 16, 16, 0" Margin="5">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="62" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="130" />
+                                                <ColumnDefinition Width="10" />
+                                                <ColumnDefinition Width="130" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout HorizontalOptions="Start" Grid.Row="0" Grid.ColumnSpan="2">
+                                                <Label x:Name="game2Date" TextColor="Black" FontSize="17" />
+                                            </StackLayout>
+                                            <Image x:Name="flag3" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" HeightRequest="55"/>
+                                            <Image x:Name="flag4" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" HeightRequest="55"/>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="2">
+                                                <Label x:Name="team3" HorizontalTextAlignment="Center" TextColor="{StaticResource gray}" FontSize="22" FontFamily="{StaticResource classicFont}"/>
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3">
+                                                <Label TextColor="{StaticResource gray}" Text="-"  FontFamily="{StaticResource boldFont}" FontSize="40"/>
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" Grid.Row="2" >
+                                                <Label x:Name="team4" HorizontalTextAlignment="Center" TextColor="{StaticResource gray}" FontSize="22" FontFamily="{StaticResource classicFont}"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                    <Frame BorderColor="Black" Padding="16, 16, 16, 0" Margin="5">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="62" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="130" />
+                                                <ColumnDefinition Width="10" />
+                                                <ColumnDefinition Width="130" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2">
+                                                <Label x:Name="game3Date" TextColor="Black" FontSize="17" />
+                                            </StackLayout>
+                                            <Image x:Name="flag5" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" HeightRequest="55"/>
+                                            <Image x:Name="flag6" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="2" HeightRequest="55"/>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="2">
+                                                <Label x:Name="team5" HorizontalTextAlignment="Center" TextColor="{StaticResource gray}" FontSize="22" FontFamily="{StaticResource classicFont}"/>
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3">
+                                                <Label TextColor="{StaticResource gray}" Text="-" FontFamily="{StaticResource boldFont}" FontSize="40"/>
+                                            </StackLayout>
+                                            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" Grid.Row="2" >
+                                                <Label x:Name="team6" HorizontalTextAlignment="Center" TextColor="{StaticResource gray}" FontSize="22" FontFamily="{StaticResource classicFont}"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </ScrollView>
+                        </Grid>
+                    </Grid>
+                    <Grid x:Name="mainpageNews" Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="104" />
+                            <RowDefinition Height="104" />
+                            <RowDefinition Height="104" />
+                            <RowDefinition Height="104" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Label HorizontalOptions="Start" VerticalOptions="Start" FontSize="20" FontFamily="{StaticResource boldFont}" Text="   NEWS" />
+                        </Grid>
+                        <Grid x:Name="NewsGrid0" Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.5*" />
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="newsImage0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Grid.Column="0" Grid.Row="0" HeightRequest="80"/>
+                            <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Start">
+                                <Label x:Name="title0" HorizontalOptions="Start" VerticalOptions="Start" FontSize="18" FontFamily="{StaticResource normalFont}" HorizontalTextAlignment="Start" />
+                                <Label x:Name="date0" HorizontalOptions="Start" VerticalOptions="Start" FontSize="14" FontFamily="{StaticResource classicFont}" TextColor="{StaticResource gray}"/>
+                            </StackLayout>
+                            <BoxView Grid.Row="1" Color="Black" HeightRequest="1" Grid.ColumnSpan="2" Margin="23, 8, 23, 5"/>
+                        </Grid>
+                        <Grid x:Name="NewsGrid1" Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.5*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0" x:Name="newsImage1" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="80"/>
+                            <StackLayout Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Start">                                       
+                                <Label x:Name="title1" FontSize="18" FontFamily="{StaticResource normalFont}" HorizontalTextAlignment="Start" />
+                                <Label x:Name="date1" FontSize="14" FontFamily="{StaticResource classicFont}" TextColor="{StaticResource gray}"/>
+                            </StackLayout>
+                            <BoxView Grid.Row="1" Color="Black" HeightRequest="1" Grid.ColumnSpan="2" Margin="23, 8, 23, 5"/>
+                        </Grid>
+                        <Grid x:Name="NewsGrid2" Grid.Row="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.5*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0" x:Name="newsImage2" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="80"/>
+                            <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Start">                                       
+                                <Label x:Name="title2" FontSize="18" FontFamily="{StaticResource normalFont}" HorizontalTextAlignment="Start" />
+                                <Label x:Name="date2" FontSize="14" FontFamily="{StaticResource classicFont}" TextColor="{StaticResource gray}"/>
+                            </StackLayout>
+                            <BoxView Grid.Row="1" Color="Black" HeightRequest="1" Grid.ColumnSpan="2" Margin="23, 8, 23, 5"/>
+                        </Grid>
+                        <Grid x:Name="NewsGrid3" Grid.Row="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*" />
+                                <ColumnDefinition Width="0.5*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0" x:Name="newsImage3" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HeightRequest="80"/>
+                            <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Start">                                       
+                                <Label x:Name="title3" FontSize="18" FontFamily="{StaticResource normalFont}" HorizontalTextAlignment="Start" />
+                                <Label x:Name="date3" FontSize="14" FontFamily="{StaticResource classicFont}" TextColor="{StaticResource gray}"/>
+                            </StackLayout>
+                        </Grid>
+                    </Grid>
+                    <Grid x:Name="mainpageAbout" Grid.Row="2">
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Button x:Name="AboutButton" Clicked="OnAboutTextClick" FontFamily="{StaticResource normalFont}" Text="About" FontSize="15" TextColor="Gray" />
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentPage>  

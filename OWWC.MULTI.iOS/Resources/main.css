@@ -1,0 +1,686 @@
+@font-face {
+  font-family: 'Industry';
+  src: url(../fonts/industry-medium-webfont.woff2) format("woff2"), url(../fonts/industry-medium-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Industry';
+  src: url(../fonts/industry-bold-webfont.woff2) format("woff2"), url(../fonts/industry-bold-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url(../fonts/notosans-regular-webfont.woff2) format("woff2"), url(../fonts/notosans-regular-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url(../fonts/notosans-bold-webfont.woff2) format("woff2"), url(../fonts/notosans-bold-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url(../fonts/notosans-italic-webfont.woff2) format("woff2"), url(../fonts/notosans-italic-webfont.woff) format("woff");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url(../fonts/notosans-bolditalic-webfont.woff2) format("woff2"), url(../fonts/notosans-bolditalic-webfont.woff) format("woff");
+  font-weight: 700;
+  font-style: italic; }
+
+.Icon--whiteFill {
+  fill: #FFFFFF; }
+
+.Icon--orangeFill {
+  fill: #FF8900; }
+
+.Link--alternate {
+  color: #333333; }
+  .Link--alternate:hover, .Link--alternate:active, .Link--alternate:focus {
+    color: #FF8900; }
+
+.MatchInfo {
+  background-color: #f1f1f1;
+  color: rgba(51, 51, 51, 0.6); }
+  .MatchInfo--dark {
+    background-color: #0b0b0b;
+    color: #FFFFFF; }
+
+@media (min-width: 768px) {
+  .MatchInfo-item {
+    border-color: rgba(51, 51, 51, 0.6); } }
+
+@media (min-width: 768px) {
+  .MatchInfo--dark .MatchInfo-item {
+    border-color: rgba(255, 255, 255, 0.4); } }
+
+.Nav a {
+  display: block;
+  margin: 0; }
+
+.Rule {
+  border-color: #333333; }
+  .Rule--light {
+    border-color: rgba(255, 255, 255, 0.4); }
+  .Rule--orange {
+    border-color: #FF8900; }
+  .Rule--grey {
+    border-color: rgba(51, 51, 51, 0.2); }
+  .Rule--short {
+    width: 80px; }
+
+.Sidebar {
+  border-top-color: #FF8900;
+  background-color: #FFFFFF; }
+
+.Sidebar-listItem {
+  border-color: rgba(51, 51, 51, 0.2); }
+
+.SubHeader-title {
+  font-family: "Industry", Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif; }
+
+.TexturedBackground.TexturedBackground {
+  background-image: url("../images/background/OWL-LBG-2.jpg"); }
+  .TexturedBackground.TexturedBackground--light-secondary {
+    background-image: url("../images/background/OWL-LBG-4.jpg"); }
+
+.TexturedBackground--dark.TexturedBackground--dark {
+  background-image: url("../images/background/OWL-DBG-2.jpg"); }
+
+.AtlanticBackground {
+  background: url("../images/background/ATL_banner.jpg") repeat 0 0; }
+
+.PacificBackground {
+  background: url("../images/background/PAC_banner.jpg") repeat 0 0; }
+
+.AboutSection {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: 0; }
+  @media (min-width: 992px) {
+    .AboutSection {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .AboutSection--left, .AboutSection--right {
+    margin: 0; }
+  .AboutSection--left {
+    margin-top: 20px; }
+    @media (min-width: 992px) {
+      .AboutSection--left {
+        max-width: 770px;
+        width: 100%;
+        margin-top: 0; } }
+  @media (min-width: 768px) {
+    .AboutSection--right {
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      width: 70%; } }
+  @media (min-width: 992px) {
+    .AboutSection--right {
+      width: 85%;
+      margin-left: 80px; } }
+
+.card:first-child,
+.Card:first-child {
+  margin-top: 0; }
+
+.card:last-child,
+.Card:last-child {
+  margin-bottom: 0; }
+
+.card-link--withOverlayAnimation:not([disabled])::before,
+.Card-link--withOverlayAnimation:not([disabled])::before {
+  background-color: rgba(0, 0, 0, 0.06); }
+
+.card-link--withUnderlineAnimation:not([disabled])::after,
+.Card-link--withUnderlineAnimation:not([disabled])::after {
+  background-color: #FF8900; }
+
+.card-title,
+.Card-title {
+  text-transform: none; }
+  .Card-link .card-title, .Card-link
+  .Card-title {
+    color: #333333; }
+    .Card-link .card-title:hover, .Card-link
+    .Card-title:hover {
+      color: #c75a00; }
+
+.card--caption .card-body,
+.card--caption .Card-body,
+.Card--caption .card-body,
+.Card--caption .Card-body {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF; }
+  .card--caption .card-body .card-link,
+  .card--caption .card-body .Card-link,
+  .card--caption .Card-body .card-link,
+  .card--caption .Card-body .Card-link,
+  .Card--caption .card-body .card-link,
+  .Card--caption .card-body .Card-link,
+  .Card--caption .Card-body .card-link,
+  .Card--caption .Card-body .Card-link {
+    color: #FFFFFF; }
+
+.card--caption .card-title,
+.card--caption .Card-title,
+.Card--caption .card-title,
+.Card--caption .Card-title {
+  color: #FFFFFF; }
+
+.card--team,
+.Card--team {
+  background-color: rgba(51, 51, 51, 0.06); }
+  .card--team .card-body,
+  .card--team .Card-body,
+  .Card--team .card-body,
+  .Card--team .Card-body {
+    color: #333333; }
+  .card--team .Card-title,
+  .card--team .card-title,
+  .Card--team .Card-title,
+  .Card--team .card-title {
+    text-transform: uppercase; }
+  .card--team .Card-button,
+  .Card--team .Card-button {
+    border-top: 1px solid rgba(51, 51, 51, 0.2); }
+    .card--team .Card-button:hover, .card--team .Card-button:active, .card--team .Card-button:focus,
+    .Card--team .Card-button:hover,
+    .Card--team .Card-button:active,
+    .Card--team .Card-button:focus {
+      color: #333333; }
+      .card--team .Card-button:hover .Icon, .card--team .Card-button:active .Icon, .card--team .Card-button:focus .Icon,
+      .Card--team .Card-button:hover .Icon,
+      .Card--team .Card-button:active .Icon,
+      .Card--team .Card-button:focus .Icon {
+        fill: #333333; }
+    .card--team .Card-button--full-border,
+    .Card--team .Card-button--full-border {
+      border: 1px solid rgba(51, 51, 51, 0.2);
+      background-color: #FFFFFF; }
+  .card--team .Card-logo .AspectRatio,
+  .Card--team .Card-logo .AspectRatio {
+    margin: 20px;
+    padding-top: calc(100% - 40px);
+    width: calc(100% - 40px); }
+  .card--team .Card-logo .AspectRatio--centered .AspectRatio-subject,
+  .Card--team .Card-logo .AspectRatio--centered .AspectRatio-subject {
+    top: 15%;
+    left: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
+  .card--team.is-active .Card-button,
+  .Card--team.is-active .Card-button {
+    background-color: #FF8900;
+    color: #FFFFFF; }
+    .card--team.is-active .Card-button .Icon,
+    .Card--team.is-active .Card-button .Icon {
+      fill: #FFFFFF; }
+
+.card--video .Card-timecode,
+.card--video .card-timecode,
+.Card--video .Card-timecode,
+.Card--video .card-timecode {
+  background-color: #333333;
+  color: #FFFFFF; }
+
+.card--video .card-link:hover .card-timecode,
+.card--video .card-link:hover .Card-timecode,
+.card--video .Card-link:hover .card-timecode,
+.card--video .Card-link:hover .Card-timecode,
+.Card--video .card-link:hover .card-timecode,
+.Card--video .card-link:hover .Card-timecode,
+.Card--video .Card-link:hover .card-timecode,
+.Card--video .Card-link:hover .Card-timecode {
+  background-color: #FF8900; }
+
+.card--video .Card-playIcon,
+.card--video .card-playIcon,
+.Card--video .Card-playIcon,
+.Card--video .card-playIcon {
+  fill: #333333; }
+
+.card--video .card-link:hover .card-playIcon,
+.card--video .card-link:hover .Card-playIcon,
+.card--video .Card-link:hover .card-playIcon,
+.card--video .Card-link:hover .Card-playIcon,
+.Card--video .card-link:hover .card-playIcon,
+.Card--video .card-link:hover .Card-playIcon,
+.Card--video .Card-link:hover .card-playIcon,
+.Card--video .Card-link:hover .Card-playIcon {
+  fill: #FF8900; }
+
+.card--video .Card-link:hover ~ .Card-imgOverlay .card-playIcon,
+.card--video .Card-link:hover ~ .Card-imgOverlay .Card-playIcon,
+.card--video .Card-link:hover ~ .card-imgOverlay .card-playIcon,
+.card--video .Card-link:hover ~ .card-imgOverlay .Card-playIcon, .card--video .Card-link:focus ~ .Card-imgOverlay .card-playIcon,
+.card--video .Card-link:focus ~ .Card-imgOverlay .Card-playIcon,
+.card--video .Card-link:focus ~ .card-imgOverlay .card-playIcon,
+.card--video .Card-link:focus ~ .card-imgOverlay .Card-playIcon,
+.card--video .card-link:hover ~ .Card-imgOverlay .card-playIcon,
+.card--video .card-link:hover ~ .Card-imgOverlay .Card-playIcon,
+.card--video .card-link:hover ~ .card-imgOverlay .card-playIcon,
+.card--video .card-link:hover ~ .card-imgOverlay .Card-playIcon,
+.card--video .card-link:focus ~ .Card-imgOverlay .card-playIcon,
+.card--video .card-link:focus ~ .Card-imgOverlay .Card-playIcon,
+.card--video .card-link:focus ~ .card-imgOverlay .card-playIcon,
+.card--video .card-link:focus ~ .card-imgOverlay .Card-playIcon,
+.Card--video .Card-link:hover ~ .Card-imgOverlay .card-playIcon,
+.Card--video .Card-link:hover ~ .Card-imgOverlay .Card-playIcon,
+.Card--video .Card-link:hover ~ .card-imgOverlay .card-playIcon,
+.Card--video .Card-link:hover ~ .card-imgOverlay .Card-playIcon,
+.Card--video .Card-link:focus ~ .Card-imgOverlay .card-playIcon,
+.Card--video .Card-link:focus ~ .Card-imgOverlay .Card-playIcon,
+.Card--video .Card-link:focus ~ .card-imgOverlay .card-playIcon,
+.Card--video .Card-link:focus ~ .card-imgOverlay .Card-playIcon,
+.Card--video .card-link:hover ~ .Card-imgOverlay .card-playIcon,
+.Card--video .card-link:hover ~ .Card-imgOverlay .Card-playIcon,
+.Card--video .card-link:hover ~ .card-imgOverlay .card-playIcon,
+.Card--video .card-link:hover ~ .card-imgOverlay .Card-playIcon,
+.Card--video .card-link:focus ~ .Card-imgOverlay .card-playIcon,
+.Card--video .card-link:focus ~ .Card-imgOverlay .Card-playIcon,
+.Card--video .card-link:focus ~ .card-imgOverlay .card-playIcon,
+.Card--video .card-link:focus ~ .card-imgOverlay .Card-playIcon {
+  fill: #FFFFFF; }
+
+.Article .blog_card {
+  background-color: rgba(51, 51, 51, 0.06);
+  border: 1px solid rgba(51, 51, 51, 0.2); }
+  .Article .blog_card-header, .Article .blog_card-footer {
+    background-color: rgba(28, 18, 19, 0.06); }
+
+.CardGroup--carouselAligned--16x9 {
+  margin-bottom: 80px; }
+
+.CardGroup--sectioned .SubHeader {
+  background-color: #333333;
+  color: #FFFFFF; }
+
+.CardGroup--sectioned .Label {
+  color: rgba(51, 51, 51, 0.4); }
+
+.CardGroup--divider .CardGroup-card {
+  border-color: rgba(51, 51, 51, 0.2); }
+
+.EmailSignUp-legal {
+  border-color: rgba(0, 0, 0, 0.06); }
+
+.EmailSignUp-form .FormLabel,
+.EmailSignUp-form .FormInput,
+.EmailSignUp-form .FormLabel--checkbox .FormInput[type=checkbox] {
+  border-color: rgba(0, 0, 0, 0.06); }
+
+.EmailSignUp-form .FormInput {
+  background: #f1f1f1; }
+  .EmailSignUp-form .FormInput::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4); }
+  .EmailSignUp-form .FormInput:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.4); }
+  .EmailSignUp-form .FormInput::placeholder {
+    color: rgba(0, 0, 0, 0.4); }
+
+.EmailSignUp-form .Dropdown .Button {
+  background: #f1f1f1;
+  border-color: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.4); }
+
+.EmailSignUp-form .Dropdown .Button--secondary .Icon {
+  fill: #FF8900; }
+
+.FeaturedHeader {
+  height: 280px; }
+  @media (min-width: 768px) {
+    .FeaturedHeader {
+      height: 320px; } }
+  @media (min-width: 992px) {
+    .FeaturedHeader {
+      height: 480px; } }
+
+.MatchRow, .MatchRow:last-child:not(:first-child) {
+  border-radius: 0; }
+
+.MatchStacked .MatchSchedule {
+  background-color: #f1f1f1; }
+
+.MatchStacked--withoutVOD .TeamLabel {
+  border-right: 5px solid #333333; }
+  .MatchStacked--withoutVOD .TeamLabel-stat:nth-child(2) {
+    padding-left: 8px; }
+
+.MatchStacked--withoutVOD .MatchSchedule .TeamLabel {
+  border-right: 0; }
+
+.MatchStacked-teams {
+  background-color: #FFFFFF; }
+  .MatchStacked-teams .TeamLabel {
+    height: 60px; }
+    .MatchStacked-teams .TeamLabel-block {
+      height: 60px;
+      width: 60px; }
+    .MatchStacked-teams .TeamLabel-logo {
+      margin: 12px 12px;
+      width: 36px;
+      height: 36px; }
+
+.MatchStacked-details {
+  margin-top: 0; }
+  .MatchStacked-details .MatchSchedule {
+    border: 1px solid #bfbfbf;
+    border-top: none; }
+
+.MatchStacked .MatchDetail-selector {
+  font-size: 0.75rem;
+  line-height: 1;
+  margin-bottom: 0; }
+  .MatchStacked .MatchDetail-selector-expand {
+    padding: 8px 0;
+    font-family: "Industry", Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #FFFFFF;
+    border-radius: 0; }
+    .MatchStacked .MatchDetail-selector-expand:hover, .MatchStacked .MatchDetail-selector-expand.is-active {
+      background-color: #00A0EA; }
+    .MatchStacked .MatchDetail-selector-expand .Icon {
+      fill: #FFFFFF; }
+
+.MatchStacked .MatchSchedule .TeamLabel {
+  height: 50px; }
+  .MatchStacked .MatchSchedule .TeamLabel-block {
+    height: 50px;
+    width: 50px; }
+
+.MatchStacked .TeamLabel {
+  border-bottom: 1px solid #bfbfbf; }
+  .MatchStacked .TeamLabel:last-of-type {
+    position: relative;
+    top: -1px;
+    margin-bottom: -2px; }
+  .MatchStacked .TeamLabel:first-child {
+    margin-bottom: 0; }
+  .MatchStacked .TeamLabel-block {
+    height: 60px;
+    width: 60px; }
+  .MatchStacked .TeamLabel-stat:last-child {
+    font-size: 1.25rem;
+    line-height: 1;
+    -ms-flex-preferred-size: 55px;
+        flex-basis: 55px;
+    font-weight: normal;
+    background-color: rgba(51, 51, 51, 0.06); }
+  .MatchStacked .TeamLabel-stat.is-winner {
+    background-color: #FF8900;
+    color: #FFFFFF;
+    font-weight: bold; }
+  .MatchStacked .TeamLabel-name, .MatchStacked .TeamLabel-stat:nth-child(2) {
+    font-size: 0.875rem;
+    line-height: 1; }
+
+.MatchStacked .MatchRow-header:not(.MatchRow-header--today) {
+  background-color: #f1f1f1; }
+
+.Legend {
+  font-size: 0.875rem;
+  line-height: 1;
+  font-family: "Industry", Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-bottom: 12px; }
+
+.Legend-content {
+  display: none; }
+  .Legend-content.is-active {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 0;
+    color: #FFFFFF;
+    background-color: #333333; }
+
+.Legend-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px; }
+  @media (max-width: 768px) {
+    .Legend-col {
+      padding-top: 4px;
+      padding-bottom: 4px; } }
+
+.Legend-cta {
+  padding-top: 8px; }
+  @media (min-width: 992px) {
+    .Legend-cta {
+      float: right;
+      padding-top: 0; } }
+
+.MediaObject--link .MediaObject-item:not([disabled])::after {
+  background-color: #FF8900; }
+
+.Nav-link {
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 0 0.625rem;
+  font-size: 0.75rem;
+  display: block;
+  background: #fff;
+  border-left: 1px solid rgba(51, 51, 51, 0.06);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 60px;
+  white-space: nowrap;
+  color: #333333;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1); }
+
+.PlayerHandle-badge {
+  font-family: "Industry", Noto Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  background-color: #333333;
+  color: #FFFFFF; }
+  .PlayerHandle-badge svg.Icon {
+    fill: #FFFFFF; }
+  .PlayerHandle-badge--light {
+    background-color: #FFFFFF;
+    color: #000000; }
+    .PlayerHandle-badge--light svg.Icon {
+      fill: #000000; }
+
+.PrizePool-prize {
+  border-left-color: #FF8900; }
+
+.table-responsive {
+  border: none; }
+
+.Table.ScrollArea-content {
+  width: calc(100% - 1px); }
+
+.Table-row {
+  background-color: #FFFFFF; }
+  .Table--secondary tbody .Table-row {
+    background-color: rgba(51, 51, 51, 0.06); }
+  .Table-row--breakout {
+    background-color: inherit; }
+  .Table-row--clickable:hover > .Table-data:first-child,
+  .Table-row--clickable:active > .Table-data:first-child,
+  .Table-row--selected > .Table-data:first-child {
+    border-left-color: #FF8900;
+    background: linear-gradient(to right, #FF8900 0, #FF8900 4px, transparent 4px, transparent 100%); }
+
+.Table-header {
+  color: #FFFFFF;
+  background-color: #333333;
+  border-color: #333333; }
+  @media (min-width: 480px) {
+    .Table-header {
+      line-height: normal;
+      white-space: nowrap; } }
+  .Table-header.is-active {
+    color: #00A0EA; }
+    .Table-header.is-active .Icon {
+      fill: #00A0EA; }
+  .Table-header--compact {
+    width: 15ch;
+    white-space: normal; }
+
+.Table-data, .Table-data:first-child, .Table-data:last-child {
+  border-color: rgba(119, 119, 119, 0.3); }
+
+.Table-data.is-positive {
+  color: #008000; }
+
+.Table-data.is-negative {
+  color: #e50e47; }
+
+.Table--noHeaderRow .Table-data {
+  border-color: rgba(119, 119, 119, 0.3); }
+
+.Tabs-controls:hover .Icon {
+  fill: #FF8900; }
+
+.Tabs-controls .Icon {
+  fill: #333333; }
+
+.Tabs-bar:after {
+  border-bottom: 4px solid rgba(51, 51, 51, 0.4); }
+
+.Tabs-tab {
+  color: #1c1213;
+  border-bottom: 4px solid rgba(51, 51, 51, 0.4); }
+  .Tabs-tab:hover, .Tabs-tab:focus {
+    border-color: #FF8900; }
+  @media (hover: none), (hover: on-demand) {
+    .Tabs-tab:hover {
+      color: #00A0EA;
+      border-color: #00A0EA; } }
+  .Tabs-tab--active, .Tabs-tab--active:focus {
+    color: #00A0EA;
+    border-bottom: 4px solid #00A0EA; }
+  .Tabs-tab--disabled {
+    color: rgba(51, 51, 51, 0.4); }
+
+.Tabs--darkBackground .Tabs-controls:hover .Icon, .Tabs--rectangular .Tabs-controls:hover .Icon {
+  fill: #FF8900; }
+
+@media (min-width: 992px) {
+  .Tabs--darkBackground .Tabs-controls, .Tabs--rectangular .Tabs-controls {
+    display: inline-block; } }
+
+.Tabs--darkBackground .Tabs-tab:hover, .Tabs--rectangular .Tabs-tab:hover {
+  color: #FF8900; }
+
+.Tabs--darkBackground .Tabs-header-wrapper {
+  background-color: #333333; }
+
+.Tabs--darkBackground .Tabs-controls .Icon {
+  fill: #FFFFFF; }
+
+.Tabs--darkBackground .Tabs-tab {
+  color: #FFFFFF; }
+  .Tabs--darkBackground .Tabs-tab--active {
+    border-bottom: 5px solid #FFFFFF;
+    color: #FFFFFF; }
+  .Tabs--darkBackground .Tabs-tab--disabled {
+    color: rgba(255, 255, 255, 0.4); }
+
+@media (hover: none) {
+  .Tabs--darkBackground .Tabs-tab:not(.Tabs-tab--disabled) {
+    color: #FFFFFF; } }
+
+.Tabs--rectangular .Tabs-header-wrapper {
+  border-bottom: 5px solid #FF8900; }
+
+.Tabs--rectangular .Tabs-tab {
+  color: #333333; }
+  .Tabs--rectangular .Tabs-tab--active {
+    background-color: #FF8900;
+    border-color: #FF8900;
+    color: #FFFFFF; }
+    .Tabs--rectangular .Tabs-tab--active:hover {
+      color: #FFFFFF; }
+  .Tabs--rectangular .Tabs-tab--disabled {
+    color: rgba(51, 51, 51, 0.4); }
+
+@media (hover: none) {
+  .Tabs--rectangular .Tabs-tab:not(.Tabs-tab--disabled) {
+    color: #1c1213; }
+  .Tabs--rectangular .Tabs-tab--active:not(.Tabs-tab--disabled) {
+    color: #FFFFFF; } }
+
+.Brackets .TeamLabel.is-winner .TeamLabel-stat:last-child {
+  background-color: #FF8900;
+  color: #FFFFFF;
+  font-weight: bold; }
+
+.Brackets--playoffs .MatchStacked > .FlexElement {
+  background-color: #333333; }
+
+.Brackets--playoffs .SubHeader--left {
+  color: #FFFFFF; }
+
+.Brackets--playoffs .SubHeader--right {
+  color: rgba(255, 255, 255, 0.4); }
+
+.Brackets--playoffs .MatchStacked-teams > .TeamLabel {
+  border-right-color: #000000; }
+  .Brackets--playoffs .MatchStacked-teams > .TeamLabel .TeamLabel-info {
+    padding-left: 12px;
+    padding-right: 8px; }
+  .Brackets--playoffs .MatchStacked-teams > .TeamLabel .TeamLabel-block {
+    background-color: #000000; }
+
+.Brackets--playoffs .MatchStacked-teams > .TeamLabel:nth-of-type(even) {
+  border-right-color: #333333; }
+  .Brackets--playoffs .MatchStacked-teams > .TeamLabel:nth-of-type(even) .TeamLabel-block {
+    background-color: #333333; }
+
+.c-Header-inner {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.06); }
+
+.PlayerHeader-wrapper {
+  color: #000000; }
+  .PlayerHeader-wrapper .PlayerHeader {
+    border-bottom-color: rgba(0, 0, 0, 0.2); }
+  .PlayerHeader-wrapper .Icon {
+    fill: #000000; }
+  .PlayerHeader-wrapper--darkBackground {
+    color: #FFFFFF; }
+    .PlayerHeader-wrapper--darkBackground .PlayerHeader {
+      border-bottom-color: rgba(255, 255, 255, 0.2); }
+    .PlayerHeader-wrapper--darkBackground .Icon {
+      fill: #FFFFFF; }
+
+.DataTable-pagination > a:hover .pagination-icon,
+.DataTable-pagination > a:hover .Pagination-icon, .DataTable-pagination a:focus .pagination-icon,
+.DataTable-pagination a:focus .Pagination-icon {
+  fill: #333333; }
+
+.DataTable-pagination a.disabled .pagination-icon {
+  fill: rgba(51, 51, 51, 0.4); }
+
+.DataTable-noResults {
+  border-color: rgba(119, 119, 119, 0.3); }
+
+.TeamHeader-item a:hover .Icon {
+  fill: #000000; }
+  .TeamHeader-item a:hover .Icon.Icon--whiteFill {
+    fill: rgba(255, 255, 255, 0.6); }
+
+.TeamHeader-item .Button:hover .Icon {
+  fill: #FF8900; }
+
+.theme--color {
+  color: #FF8900; }

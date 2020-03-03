@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F56B97D6-C22E-40C8-9238-004B549895F0}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OWWC.MULTI.Droid</RootNamespace>
+    <AssemblyName>OWWC.MULTI.Android</AssemblyName>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ReleaseVersion>1.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Java.Interop" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="27.0.2.1" />
+    <PackageReference Include="Xamarin.GooglePlayServices.Base">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Basement">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Tasks">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\NetworkConnection.cs" />
+    <Compile Include="ConstantsAndroid.cs" />
+    <Compile Include="Data\TwelveHour.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\owwc_1hdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\owwc_1xhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\owwc_1xxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\livehdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\livexhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\livexxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\finlandFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\finlandFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\finlandFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable\finlandFlag.png" />
+    <AndroidResource Include="Resources\drawable\live.png" />
+    <AndroidResource Include="Resources\drawable\usFlag.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\usFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\usFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\usFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\brazilFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\brazilFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\brazilFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable\brazilFlag.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\swedenFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\swedenFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\swedenFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable\swedenFlag.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\canadaFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\canadaFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\canadaFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable\canadaFlag.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\swissFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\swissFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\swissFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable\swissFlag.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\italyFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\italyFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\italyFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable\italyFlag.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\polandFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\polandFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\polandFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable\polandFlag.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ausFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable\ausFlag.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ausFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ausFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable\austriaFlag.png" />
+    <AndroidResource Include="Resources\drawable\chinaFlag.png" />
+    <AndroidResource Include="Resources\drawable\denmarkFlag.png" />
+    <AndroidResource Include="Resources\drawable\franceFlag.png" />
+    <AndroidResource Include="Resources\drawable\germanFlag.png" />
+    <AndroidResource Include="Resources\drawable\hkFlag.png" />
+    <AndroidResource Include="Resources\drawable\japanFlag.png" />
+    <AndroidResource Include="Resources\drawable\nlFlag.png" />
+    <AndroidResource Include="Resources\drawable\norwayFlag.png" />
+    <AndroidResource Include="Resources\drawable\russiaFlag.png" />
+    <AndroidResource Include="Resources\drawable\spainFlag.png" />
+    <AndroidResource Include="Resources\drawable\taiwanFlag.png" />
+    <AndroidResource Include="Resources\drawable\thaiFlag.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\austriaFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\chinaFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\denmarkFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\franceFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\germanFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hkFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\japanFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\nlFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\norwayFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\russiaFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spainFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\taiwanFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\thaiFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\austriaFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\chinaFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\denmarkFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\franceFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\germanFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hkFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\japanFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\nlFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\norwayFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\russiaFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\spainFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\taiwanFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\thaiFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\austriaFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\chinaFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\denmarkFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\franceFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\germanFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hkFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\japanFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\nlFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\norwayFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\russiaFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\spainFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\taiwanFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\thaiFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\skFlaghdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\skFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\skFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable\skFlag.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\owwc_1xxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\livexxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\finlandFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\usFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\brazilFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\swedenFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\canadaFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\swissFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\italyFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\polandFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ausFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\austriaFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\chinaFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\denmarkFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\franceFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\germanFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hkFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\japanFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\nlFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\norwayFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\russiaFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\spainFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\taiwanFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\thaiFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\skFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable\owwcLogo2018.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\owwcLogo2018hdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\owwcLogo2018xhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\owwcLogo2018xxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\owwcLogo2018xxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\tab_standings_xxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\tab_standings_xxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\tab_standings_xhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_standings_hdpi.png" />
+    <AndroidResource Include="Resources\drawable\tab_standings_mdpi.png" />
+    <AndroidResource Include="Resources\drawable\stadium.png" />
+    <AndroidResource Include="Resources\drawable\owwcBack.png" />
+    <AndroidResource Include="Resources\drawable\ukFlag.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ukFlagxxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ukFlagxxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ukFlagxhdpi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ukFlaghdpi.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\OWWC.MULTI\OWWC.MULTI.csproj">
+      <Project>{9248A69D-2868-45F2-810D-DD705897C289}</Project>
+      <Name>OWWC.MULTI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\BigNoodleTooOblique.ttf" />
+    <AndroidAsset Include="Assets\Blizzard.ttf" />
+    <AndroidAsset Include="Assets\ConcourseT4-Bold.ttf" />
+    <AndroidAsset Include="Assets\ConcourseT4-Regular.ttf" />
+    <AndroidAsset Include="Assets\OpenSans.ttf" />
+    <AndroidAsset Include="Assets\styles.css" />
+    <AndroidAsset Include="Assets\main.css" />
+    <AndroidAsset Include="Assets\app.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\drawable\owwcIntro.mp4" />
+    <EmbeddedResource Include="Resources\drawable\owwc.mp4" />
+    <EmbeddedResource Include="Resources\drawable\owwcLoading.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

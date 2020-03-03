@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BFD5F65-2E62-4BC3-A1E8-699F5095FA24}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>OWWC.MULTI.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>OWWC.MULTI.iOS</AssemblyName>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ReleaseVersion>1.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: Alp Deniz Senyurt (5MBFKSBKB8)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchExtraArgs>-v -v -v -v -v</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Alp Deniz Senyurt (5MBFKSBKB8)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer: Alp Deniz Senyurt (5MBFKSBKB8)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: Alp Deniz Senyurt (5MBFKSBKB8)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\NetworkConnection.cs" />
+    <Compile Include="Data\TwelveHour.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\tab_about.png" />
+    <BundleResource Include="Resources\tab_about%402x.png" />
+    <BundleResource Include="Resources\tab_about%403x.png" />
+    <BundleResource Include="Resources\tab_feed.png" />
+    <BundleResource Include="Resources\tab_feed%402x.png" />
+    <BundleResource Include="Resources\tab_feed%403x.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
+    <BundleResource Include="Resources\xamarin_logo%402x.png" />
+    <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\tab_countries.png" />
+    <BundleResource Include="Resources\owwc%402x.png" />
+    <BundleResource Include="Resources\owwc%403x.png" />
+    <BundleResource Include="Resources\live.png" />
+    <BundleResource Include="Resources\live%402x.png" />
+    <BundleResource Include="Resources\live%403x.png" />
+    <BundleResource Include="Resources\finlandFlag_2x.png" />
+    <BundleResource Include="Resources\finlandFlag_3x.png" />
+    <BundleResource Include="Resources\finlandFlag.png" />
+    <BundleResource Include="Resources\swedenFlag%403x.png" />
+    <BundleResource Include="Resources\swedenFlag.png" />
+    <BundleResource Include="Resources\swedenFlag%402x.png" />
+    <BundleResource Include="Resources\ausFlag.png" />
+    <BundleResource Include="Resources\ausFlag%402x.png" />
+    <BundleResource Include="Resources\ausFlag%403x.png" />
+    <BundleResource Include="Resources\canadaFlag.png" />
+    <BundleResource Include="Resources\canadaFlag.svg" />
+    <BundleResource Include="Resources\canadaFlag%402x.png" />
+    <BundleResource Include="Resources\canadaFlag%403x.png" />
+    <BundleResource Include="Resources\italyFlag.png" />
+    <BundleResource Include="Resources\italyFlag%402x.png" />
+    <BundleResource Include="Resources\italyFlag%403x.png" />
+    <BundleResource Include="Resources\polandFlag.png" />
+    <BundleResource Include="Resources\polandFlag%402x.png" />
+    <BundleResource Include="Resources\polandFlag%403x.png" />
+    <BundleResource Include="Resources\swissFlag.png" />
+    <BundleResource Include="Resources\swissFlag%402x.png" />
+    <BundleResource Include="Resources\swissFlag%403x.png" />
+    <BundleResource Include="Resources\usFlag.png" />
+    <BundleResource Include="Resources\usFlag%402x.png" />
+    <BundleResource Include="Resources\usFlag%403x.png" />
+    <BundleResource Include="Resources\austriaFlag.png" />
+    <BundleResource Include="Resources\austriaFlag%402x.png" />
+    <BundleResource Include="Resources\austriaFlag%403x.png" />
+    <BundleResource Include="Resources\denmarkFlag.png" />
+    <BundleResource Include="Resources\denmarkFlag%402x.png" />
+    <BundleResource Include="Resources\denmarkFlag%403x.png" />
+    <BundleResource Include="Resources\franceFlag.png" />
+    <BundleResource Include="Resources\franceFlag%402x.png" />
+    <BundleResource Include="Resources\franceFlag%403x.png" />
+    <BundleResource Include="Resources\germanFlag.png" />
+    <BundleResource Include="Resources\germanFlag%402x.png" />
+    <BundleResource Include="Resources\germanFlag%403x.png" />
+    <BundleResource Include="Resources\hkFlag.png" />
+    <BundleResource Include="Resources\hkFlag%402x.png" />
+    <BundleResource Include="Resources\hkFlag%403x.png" />
+    <BundleResource Include="Resources\japanFlag.png" />
+    <BundleResource Include="Resources\japanFlag%402x.png" />
+    <BundleResource Include="Resources\japanFlag%403x.png" />
+    <BundleResource Include="Resources\nlFlag.png" />
+    <BundleResource Include="Resources\nlFlag.svg" />
+    <BundleResource Include="Resources\nlFlag%402x.png" />
+    <BundleResource Include="Resources\nlFlag%403x.png" />
+    <BundleResource Include="Resources\norwayFlag.png" />
+    <BundleResource Include="Resources\norwayFlag%402x.png" />
+    <BundleResource Include="Resources\norwayFlag%403x.png" />
+    <BundleResource Include="Resources\russiaFlag.png" />
+    <BundleResource Include="Resources\russiaFlag%402x.png" />
+    <BundleResource Include="Resources\russiaFlag%403x.png" />
+    <BundleResource Include="Resources\spainFlag.png" />
+    <BundleResource Include="Resources\spainFlag.svg" />
+    <BundleResource Include="Resources\spainFlag%402x.png" />
+    <BundleResource Include="Resources\spainFlag%403x.png" />
+    <BundleResource Include="Resources\taiwanFlag.png" />
+    <BundleResource Include="Resources\taiwanFlag%402x.png" />
+    <BundleResource Include="Resources\taiwanFlag%403x.png" />
+    <BundleResource Include="Resources\taiwanFlag_1.png" />
+    <BundleResource Include="Resources\taiwanFlag_1%402x.png" />
+    <BundleResource Include="Resources\taiwanFlag_1%403x.png" />
+    <BundleResource Include="Resources\thaiFlag.png" />
+    <BundleResource Include="Resources\thaiFlag%402x.png" />
+    <BundleResource Include="Resources\thaiFlag%403x.png" />
+    <BundleResource Include="Resources\chinaFlag.png" />
+    <BundleResource Include="Resources\chinaFlag%402x.png" />
+    <BundleResource Include="Resources\chinaFlag%403x.png" />
+    <BundleResource Include="Resources\skFlag.png" />
+    <BundleResource Include="Resources\skFlag%402x.png" />
+    <BundleResource Include="Resources\skFlag%403x.png" />
+    <BundleResource Include="Resources\blizzard.ttf" />
+    <BundleResource Include="Resources\ConcourseT4-Regular.ttf" />
+    <BundleResource Include="Resources\ConcoureseT4-Bold.ttf" />
+    <BundleResource Include="Resources\BigNoodleTooOblique.ttf" />
+    <BundleResource Include="Resources\OpenSans.ttf" />
+    <BundleResource Include="Resources\tab_standings.svg" />
+    <BundleResource Include="Resources\tab_standings%402x.png" />
+    <BundleResource Include="Resources\tab_standings%403x.png" />
+    <BundleResource Include="Resources\owwcLogo2018.png" />
+    <BundleResource Include="Resources\owwcLogo2018%403x.png" />
+    <BundleResource Include="Resources\owwcLogo2018%402x.png" />
+    <BundleResource Include="Resources\ukFlag.png" />
+    <BundleResource Include="Resources\ukFlag%402x.png" />
+    <BundleResource Include="Resources\ukFlag%403x.png" />
+    <BundleResource Include="Resources\brazilFlag.png" />
+    <BundleResource Include="Resources\brazilFlag%403x.png" />
+    <BundleResource Include="Resources\brazilFlag%402x.png" />
+    <BundleResource Include="Resources\stadium.png" />
+    <BundleResource Include="Resources\owwcBack.png" />
+    <BundleResource Include="Resources\main.css" />
+    <BundleResource Include="Resources\styles.css" />
+    <BundleResource Include="Resources\app.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\owwc.png" />
+    <EmbeddedResource Include="Resources\owwcIntro.mp4" />
+    <EmbeddedResource Include="Resources\owwc.mp4" />
+    <EmbeddedResource Include="Resources\owwcLoading.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OWWC.MULTI\OWWC.MULTI.csproj">
+      <Project>{9248A69D-2868-45F2-810D-DD705897C289}</Project>
+      <Name>OWWC.MULTI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.2.0.839982</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>

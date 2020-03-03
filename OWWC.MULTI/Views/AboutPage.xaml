@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OWWC.MULTI.Views.AboutPage" xmlns:vm="clr-namespace:OWWC.MULTI.ViewModels" Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="orange">#ff8900</Color>
+            <Color x:Key="live">#ee4142</Color>
+            <Color x:Key="gray">#43484c</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="blizzardFont">
+                <On Platform="Android" Value="Blizzard.ttf#Blizzard-Regular" />
+                <On Platform="iOS" Value="Blizzard" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="boldFont">
+                <On Platform="Android" Value="ConcourseT4-Bold.ttf#ConcourseT4-Bold" />
+                <On Platform="iOS" Value="ConcourseT4-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="bigItalicFont">
+                <On Platform="Android" Value="BigNoodleTooOblique.ttf#BigNoodleTooOblique" />
+                <On Platform="iOS" Value="BigNoodleTooOblique" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="classicFont">
+                <On Platform="Android" Value="OpenSans.ttf#OpenSans" />
+                <On Platform="iOS" Value="OpenSans" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" BackgroundColor="{StaticResource gray}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="owwcLogo2018.png" HorizontalOptions="Center" VerticalOptions="FillAndExpand" HeightRequest="128"/>
+            <StackLayout HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="1">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Overwatch World Cup 2018 App" FontFamily="{StaticResource boldFont}" FontSize="25" ForegroundColor="White"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Version 0.6 (Early Beta)" FontFamily="{StaticResource classicFont}" FontSize="10" ForegroundColor="White"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1">
+        <ScrollView Orientation="Vertical">
+            <StackLayout HorizontalOptions="Start" VerticalOptions="Start" Padding="8,15,8,40" Orientation="Vertical" Spacing="10">
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="About the App" FontFamily="{StaticResource boldFont}" FontSize="22"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="This app has been created with passion and dedication in very hard times. It still is not perfect but it's getting there. Thanks for all the support to Overwatch community and dev team at Blizzard!" FontFamily="{StaticResource blizzardFont}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text=" " FontFamily="{StaticResource blizzardFont}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Credits" FontFamily="{StaticResource bigItalicFont}" FontSize="28"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Programming: Alp Deniz Senyurt" FontFamily="{StaticResource blizzardFont}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Design: Juan Pablo De La Tijera Obert" FontFamily="{StaticResource blizzardFont}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Country Info: Courtesy of u/shomman" FontFamily="{StaticResource blizzardFont}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text=" " FontFamily="{StaticResource blizzardFont}" FontSize="7"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label HorizontalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="DISCLAIMER" FontFamily="{StaticResource bigItalicFont}" FontSize="30"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Neither this app or its developer is affiliated with Blizzard in any way. Overwatch Worldcup, worldcup logo, fonts and video are owned by Blizzard. This app has no commercial use, only to help people track Overwatch Worldcup easily on their phone. (But they can still help me)" FontFamily="{StaticResource blizzardFont}"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            </ScrollView>
+        </Grid>
+    </Grid>
+</ContentPage>

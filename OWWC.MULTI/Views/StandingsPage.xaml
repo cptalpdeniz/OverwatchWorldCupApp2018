@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OWWC.MULTI.Views.StandingsPage" Title="Top 24 Countries">
+        <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="titleBackground">#3d424d</Color>
+            <Color x:Key="background">#c3ccd5</Color>
+            <Color x:Key="countryName">#1b1f27</Color>
+            <OnPlatform x:TypeArguments="x:String" x:Key="blizzardFont">
+                <On Platform="Android" Value="Blizzard.ttf#Blizzard-Regular" />
+                <On Platform="iOS" Value="Blizzard" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ListView   x:Name="list" 
+                    IsPullToRefreshEnabled="false" 
+                    CachingStrategy="RecycleElement" 
+                    HasUnevenRows="false" 
+                    IsGroupingEnabled="true" 
+                    GroupDisplayBinding="{Binding LongName}" 
+                    SeparatorColor="#436ec1"
+                    RowHeight="55">  
+                    <!--ItemSelected="Handle_ItemSelected" for future update-->
+            <ListView.Header>
+                <Grid BackgroundColor="{StaticResource titleBackground}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.6*" />
+                        <ColumnDefinition Width="0.15*" />
+                        <ColumnDefinition Width="0.15*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Margin="5,0" Text="Country" HorizontalOptions="Start" TextColor="White" FontFamily="{StaticResource blizzardFont}" Grid.Column="0"/>
+                    <Label Text="GR" TextColor="White" FontFamily="{StaticResource blizzardFont}" Grid.Column="1" HorizontalOptions="Center"/>
+                    <Label Text="MR" TextColor="White" FontFamily="{StaticResource blizzardFont}" Grid.Column="2" HorizontalOptions="Center"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*" />
+                                <ColumnDefinition Width="0.4*" />
+                                <ColumnDefinition Width="0.15*" />
+                                <ColumnDefinition Width="0.15*" />
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="flagImage" HeightRequest="47" Source="{Binding FlagLocation}"  Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                            <Grid Grid.Column="1" >
+                                <Label Text="{Binding Name}" TextColor="{StaticResource countryName}" FontFamily="{StaticResource blizzardFont}" HorizontalOptions="Start" VerticalOptions="Center" />
+                            </Grid>
+                            <Label Text="{Binding MapScore}" TextColor="{StaticResource countryName}" FontFamily="{StaticResource blizzardFont}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="2" />
+                            <Label Text="{Binding SeriesScore}" TextColor="{StaticResource countryName}" FontFamily="{StaticResource blizzardFont}" HorizontalOptions="Start" VerticalOptions="Center" Grid.Column="3" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
