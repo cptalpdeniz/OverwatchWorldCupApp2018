@@ -8,7 +8,7 @@ A cross-platform mobile App created using Xamarin.Forms for iOS and Android.
 
 ## About
 
-A companion app for players and viewers to follow the 2018 Overwatch World Cup tournament. More information about the tournament can be found [here](https://liquipedia.net/overwatch/Overwatch_World_Cup/2018) on the Liquipedia page. This mobile application was created using Xamarin.Forms Framework, written in C# using .NET Standart 2.0, compable with iOS 10+ and Android 6.0. 
+A companion app for players and viewers to follow the 2018 Overwatch World Cup tournament. More information about the tournament can be found [here](https://liquipedia.net/overwatch/Overwatch_World_Cup/2018) on the Liquipedia page. This mobile application was created using Xamarin.Forms Framework, written in C# using .NET Standart 2.0, compable with iOS 10+ and Android 6.0+. 
 
 ## Features
 
